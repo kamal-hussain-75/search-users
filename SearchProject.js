@@ -105,42 +105,42 @@ let  users = [
 function showUsers(arr) {
     arr.forEach(function (user) {
 
-        // card div
+        
         const card = document.createElement("div");
         card.classList.add ("card");
 
-       // image
+       
        const img = document.createElement("img");
-       img.src = user.pic; // ya actual image path
+       img.src = user.pic;
        img.classList.add("bg-img");
 
-       // blurred layer
+    
        const blurLayer = document.createElement("div");
-       blurLayer.style.backgroundImage = `url(${user.pic})`; // ya actual image path
+       blurLayer.style.backgroundImage = `url(${user.pic})`; 
        blurLayer.classList.add("blurred-layer");
 
-       // content div
+       
        const content = document.createElement("div");
        content.classList.add("content");
 
-       // h3
+       
        const heading = document.createElement("h3");
        heading.textContent = user.name;
 
-       // p
+       
        const para = document.createElement("p");
        para.textContent = user.bio;
 
-       // append content ke andar
+      
        content.appendChild(heading);
        content.appendChild(para);
 
-       // append card ke andar
+       
        card.appendChild(img);
        card.appendChild(blurLayer);
        card.appendChild(content);
 
-       // finally body me add
+       
         document.querySelector("#cardss").appendChild(card);
       
 
@@ -159,4 +159,5 @@ inp.addEventListener("input",function(){
   showUsers(newUser);
    
 });
+
 
